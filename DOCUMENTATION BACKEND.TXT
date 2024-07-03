@@ -1,0 +1,9 @@
+In the server side, there are some folders and files which has specific function each, as follows:
+
+1. controllers  => creating some logic function for the features on website (e.g registration logic, login logic)
+2. middleware  => consisting some authorization protocols
+3. models  => to define a model/variable and its type(e.g defining an object with name firstName with argument type: String and required: true)
+4. routes  =>  just like any other routes folder in backend frameworks, basically it includes the function to do certain function like get, post, patch, delete
+5. ENV  => to configure the database, PORT, and jsonwebtoken authorization.
+6. index.js  => A file that consisting all function and configuration from all files and folders in the server side.
+7. data => some data example to be rendered on frontend side
