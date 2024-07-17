@@ -1,8 +1,24 @@
 Youtube link : https://www.youtube.com/watch?v=K8YELRmUb5o&list=PLVc9kWfMYdlt6WSPzNae522PMKJ4k1tji&index=83&t=5119s
 Github link : https://github.com/ed-roh/mern-social-media/blob/master/client/src/index.js
 
-#LIBRARY/EXTENSION/PLUG-IN USED IN BACKEND SIDE 
-1. 
+#LIBRARY/EXTENSION/PLUG-IN USED/INSTALLED IN BACKEND SIDE 
+npm i ->
+1. express = install express frameworks
+2. body-parser = process the request body
+3. bcrypt = for password encryption
+4. cors = for cross origin request 
+5. dotenv = for environtment variables
+6. gridfs-stream = for upload file
+7. multer multer-gridfs-storage = for upload file locally
+8. helmet = request safety
+9. morgan = for login
+10. jsonwebtoken = for authentification
+11. mongoose = for mongodb access
+
+#SOME IMPORTANT LITTLE DETAILS AS FOLLOW:
+1. (package.json) add json data with name "type" : "module" to help importing and exporting data/module
+2. 
+
 #BACKEND 
 In the server(backend) side, there are some folders and files which has specific function each, as follows:
 
