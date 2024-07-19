@@ -29,3 +29,5 @@ In the server(backend) side, there are some folders and files which has specific
 5. ENV  => to configure the database, PORT, and jsonwebtoken authorization.
 6. index.js  => A file that consisting all function and configuration from all files and folders in the server side.
 7. data => some data example to be rendered on frontend side
+
+//test commit from another laptop with same account
