@@ -1,9 +1,11 @@
+//THIS FILE IS USED FOR AUTHENTIFICATION PROCEDURE E.G LOGIN AND REGISTRATION
+
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 import User from "../models/User.js";
 
 /* REGISTER USER */
-export const register = async (req, res) => {
+export const register = async (req, res) => { //register function
     try{
         const {
             firsName,
@@ -39,7 +41,7 @@ export const register = async (req, res) => {
 };
 
 /* LOGGING IN */
-export const login = async (req, res) => {
+export const login = async (req, res) => { //login function
     try{
         const { email, password } = req.body; //request http body along with these property for POST method
         const user = await User.findOne({ email: email }); //wait untill the selected user found
