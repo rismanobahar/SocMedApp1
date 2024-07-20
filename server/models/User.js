@@ -1,3 +1,5 @@
+//Define and give attribute for data in user
+
 import mongoose from "mongoose";
 
 const UserSchema = new mongoose.Schema({
@@ -40,5 +42,5 @@ const UserSchema = new mongoose.Schema({
     { timestamp: true }
 );
 
-const User = mongoose.model("User", UserSchema);
+const User = mongoose.model("User", UserSchema); //the "User" parameter refers to database collection that will be created with mongoose in mongoDB Atlas
 export default User;
