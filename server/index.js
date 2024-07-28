@@ -44,8 +44,8 @@ const storage = multer.diskStorage({
 const upload = multer({ storage });
 
 /* ROUTES WITH FILES */
-app.post("auth/register", upload.single("picture"), register);
-app.post("/posts", verifyToken, upload.single("picture"), createPost);
+app.post("auth/register", upload.single("picture"), register); //the image that has been uploaded at register will be saved locally
+app.post("/posts", verifyToken, upload.single("picture"), createPost); ////the image that has been uploaded while creating post will be saved locally
 
 /* ROUTES */
 app.use("/auth", authRoutes);

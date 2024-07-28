@@ -1,0 +1,28 @@
+Youtube link : https://www.youtube.com/watch?v=K8YELRmUb5o&list=PLVc9kWfMYdlt6WSPzNae522PMKJ4k1tji&index=83&t=5119s
+Github link : https://github.com/ed-roh/mern-social-media/blob/master/client/src/index.js
+
+#LIBRARY/EXTENSION/PLUG-IN USED/INSTALLED IN BACKEND SIDE 
+npm i ->
+1. react-redux = for state management tools
+2. @reduxjs/toolkit = additional library for react-redux and an easy way to use redux
+3. redux-persist = store a state into local storage(e.g user and token). so if the user close the tab and open the web back, the information is still in the browser
+4. react-dropzone = for uploading file, so the file will be sent into backend
+5. dotenv = for environtment variables
+6. formik = for form handling
+7. yup = for validation
+8. react-router-dom = for handling different pages
+9. @mui/material = for styling
+10. @emotion/react = for styling
+11. @emotion/styled = for styling
+12. @mui/icons-material = for styling
+
+#SOME IMPORTANT LITTLE DETAILS AS FOLLOW:
+1. jsconfig.json is used to make import any files within src folder easier. example, instead
+   importing "./src/scenes/homepage/index.js" you can change it into "scenes/homepage"
+2. 
+
+#FRONTEND
+In the server(backend) side, there are some folders and files which has specific function each, as follows:
+1. components = for storing some components that will be used in different pages
+2. scenes = basically consisting all pages file on the website
+3. state = used for storing redux, logic, and toolkits information

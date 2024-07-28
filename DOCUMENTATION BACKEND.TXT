@@ -21,7 +21,6 @@ npm i ->
 
 #BACKEND 
 In the server(backend) side, there are some folders and files which has specific function each, as follows:
-
 1. controllers  => creating some logic function for the features on website (e.g registration logic, login logic)
 2. middleware  => handling incoming request and response before reaching final route handler
 3. models  => to define a model/variable and its type(e.g defining an object with name firstName with argument type: String and required: true) from the table/column in database
@@ -30,4 +29,3 @@ In the server(backend) side, there are some folders and files which has specific
 6. index.js  => A file that consisting all function and configuration from all files and folders in the server side.
 7. data => some data example to be rendered on frontend side
 
-//test commit from another laptop with same account
