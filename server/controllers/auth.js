@@ -8,7 +8,7 @@ import User from "../models/User.js";
 export const register = async (req, res) => { //register function
     try{
         const {
-            firsName,
+            firstName,
             lastName,
             email,
             password,
@@ -22,7 +22,7 @@ export const register = async (req, res) => { //register function
         const passwordHash = await bcrypt.hash(password, salt); //hash the password(encrypt or secure it)
 
         const newUser = new User({
-            firsName,
+            firstName,
             lastName,
             email,
             password,
@@ -56,4 +56,4 @@ export const login = async (req, res) => { //login function
     }   catch (err) {
         res.status(500).json({ error: err.message });
     }
-}
+};
