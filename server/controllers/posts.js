@@ -4,26 +4,29 @@ import Post from "../models/Post.js";
 import User from "../models/User.js";
 
 /* CREATE POST */
-export const createPost = async (res, req) => { //create post function
+export const createPost = async (req, res) => {
     try {
-        const { userId, description, picturePath } = req.body; //request these properties
-        const user = await User.findById(userId); //wait for the ID found
-        const newPost = new Post({
-            userId,
-            firstName: user.firstName,
-            lastName: user.lastName,
-            location: user.location,
-            description,
-            userPicturePath: user.picturePath,
-            picturePath,
-            likes: {},
-            comments: [],
-        }) //create new Post property
-        await newPost.save(); //wait for those data to be sent after the button save pressed
+      const { userId, description, picturePath } = req.body;
+      const user = await User.findById(userId);
+      const newPost = new Post({
+        userId,
+        firstName: user.firstName,
+        lastName: user.lastName,
+        location: user.location,
+        description,
+        userPicturePath: user.picturePath,
+        picturePath,
+        likes: {},
+        comments: [],
+      });
+      await newPost.save();
+  
+      const post = await Post.find();
+      res.status(201).json(post);
     } catch (err) {
-        res.status(409).json({ message: err.message });
+      res.status(409).json({ message: err.message });
     }
-}
+  };
 
 /* READ POST */
 export const getFeedPosts = async (req, res) => { //gets and reads user's post at feed

@@ -30,7 +30,7 @@ app.use(morgan("common"));
 app.use(bodyParser.json({ limit: "30mb", extended: true }));
 app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
 app.use(cors());
-app.use("/assets", express.static(path.join(__dirname, 'public/assets')));
+app.use("/assets", express.static(path.join(__dirname, "public/assets")));
 
 /* FILE STORAGE */ 
 const storage = multer.diskStorage({
@@ -44,8 +44,8 @@ const storage = multer.diskStorage({
 const upload = multer({ storage });
 
 /* ROUTES WITH FILES */
-app.post("auth/register", upload.single("picture"), register); //the image that has been uploaded at register will be saved locally
-app.post("/posts", verifyToken, upload.single("picture"), createPost); ////the image that has been uploaded while creating post will be saved locally
+app.post("/auth/register", upload.single("picture"), register); //the image that has been uploaded at register will be saved locally
+app.post("/posts", verifyToken, upload.single("picture"), createPost); //the image that has been uploaded while creating post will be saved locally
 
 /* ROUTES */
 app.use("/auth", authRoutes);
@@ -54,8 +54,10 @@ app.use("/posts", postRoutes);
 
 /* MONGOOSE SETUP */
 const PORT = process.env.PORT || 6001;
-mongoose
-.connect(process.env.MONGO_URL, {})
+mongoose.connect(process.env.MONGO_URL, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+})
 .then(() => {
     app.listen(PORT, () => console.log(`Server Port: ${PORT}`));
 

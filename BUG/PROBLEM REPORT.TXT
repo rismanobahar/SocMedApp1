@@ -1,0 +1,10 @@
+8/2/2024:
+1. able to show all users image post but the current user
+2. successfully post the user's image at post function, but cannot showing the current logged in user's image
+solution:
+1. try running these two projects together
+8/3/2024:
+1. the app gets freeze when it was started
+2. cannot run the original project and clone project at the same time
+solution:
+1. try copying the backend and frontend file from the original project and try running it

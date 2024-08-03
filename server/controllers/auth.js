@@ -25,7 +25,7 @@ export const register = async (req, res) => { //register function
             firstName,
             lastName,
             email,
-            password,
+            password: passwordHash,
             picturePath,
             friends,
             location,
