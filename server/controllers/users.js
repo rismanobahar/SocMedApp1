@@ -11,7 +11,7 @@ export const getUser = async (req, res) => { //showing your data on homepage(lef
     } catch (err) {
         res.status(404).json({ message: err.message }); //error
     }
-}
+};
 
 export const getUserFriends = async (req, res) => { //showing your friend list at the right side of the page
     try{
@@ -30,7 +30,7 @@ export const getUserFriends = async (req, res) => { //showing your friend list a
     } catch (err) {
       res.status(404).json({ message: err.message }); //error
     }
-}
+};
 
 /* UPDATE */
 export const addRemoveFriend = async (req, res) => { //A function to add or remove friend
@@ -62,4 +62,4 @@ export const addRemoveFriend = async (req, res) => { //A function to add or remo
     } catch (err) {
         res.status(404).json({ message: err.message });
     }
-}
+};

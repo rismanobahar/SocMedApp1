@@ -36,7 +36,7 @@ export const getFeedPosts = async (req, res) => { //gets and reads user's post a
     } catch (err) {
         res.status(404).json({ message: err.message });
     }
-}
+};
 
 export const getUserPosts = async (req, res) => {  //gets and shows certain user post
     try{
@@ -46,7 +46,7 @@ export const getUserPosts = async (req, res) => {  //gets and shows certain user
     } catch (err) {
         res.status(404).json({ message: err.message });
     }
-}
+};
 
 /* UPDATE */
 export const likePost = async (req, res) => { //a function for user giving like on post
@@ -72,4 +72,4 @@ export const likePost = async (req, res) => { //a function for user giving like 
     }catch (err) {
     res.status(404).json({ message: err.message });
     }
-}
+};

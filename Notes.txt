@@ -1,0 +1,8 @@
+8/5/2024:
+1. successfully fix an issue where user can see the picture that has been uploaded
+next plan :
+1. Finish reading all of express documentation
+2. comprehend how the frontend works
+3. comprehend how the login, register, token works
+4. change the app name and the color
+5. try convert the frontend into vite format or create new vite project and copy all files into it
