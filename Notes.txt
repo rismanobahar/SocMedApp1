@@ -6,3 +6,4 @@ next plan :
 3. comprehend how the login, register, token works
 4. change the app name and the color
 5. try convert the frontend into vite format or create new vite project and copy all files into it
+6. learn how to do testing in express
